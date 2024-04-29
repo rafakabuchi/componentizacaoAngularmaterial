@@ -1,0 +1,51 @@
+<section class="modal">
+  <h1 mat-dialog-title>viajante</h1>
+  <div mat-dialog-content>
+    <div class="selecao-idade">
+      <ul>
+        <li>adultos</li>
+        <li>(acima de 12 anos)</li>
+        <li>
+          <app-botao-controle operacao="decrementar"></app-botao-controle>
+          <span>1</span>
+          <app-botao-controle operacao="incrementar"></app-botao-controle>
+        </li>
+      </ul>
+
+      <ul>
+        <li>crianças</li>
+        <li>(entre 2 e 11 anos)</li>
+        <li>
+          <app-botao-controle operacao="decrementar"></app-botao-controle>
+          <span>1</span>
+          <app-botao-controle operacao="incrementar"></app-botao-controle>
+        </li>
+      </ul>
+
+      <ul>
+        <li>bebês</li>
+        <li>(até 2 anos)</li>
+        <li>
+          <app-botao-controle operacao="decrementar"></app-botao-controle>
+          <span>1</span>
+          <app-botao-controle operacao="incrementar"></app-botao-controle>
+        </li>
+      </ul>
+    </div>
+
+    <div class="categoria">
+      <p><strong>Categoria</strong></p>
+      <mat-chip-listbox aria-label="seleção de passagens">
+        <mat-chip-option selected>1 adulto</mat-chip-option>
+        <mat-chip-option>ecônomica</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+
+    <div mat-dialog-actions class="modal-actions">
+      <button mat-flat-button mat-dialog-close color="primary">
+        <mat-icon>search</mat-icon>
+        buscar</button>
+    </div>
+  </div>
+
+</section>

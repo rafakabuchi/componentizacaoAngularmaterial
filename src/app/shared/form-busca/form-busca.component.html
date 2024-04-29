@@ -1,0 +1,62 @@
+<app-card variant="secondary" class="form-busca">
+  <form>
+    <h2>Passagens</h2>
+    <div class="flex-container">
+      <mat-button-toggle-group aria-label="Tipo de passagem">
+        <mat-button-toggle>
+          <mat-icon>check</mat-icon>
+          Ida e Volta
+        </mat-button-toggle>
+        <mat-button-toggle>Somente ida</mat-button-toggle>
+      </mat-button-toggle-group>
+      <mat-chip-listbox aria-label="seleção de passagem" (click)="openDialog()">
+        <mat-chip-option selected>1 adulto</mat-chip-option>
+        <mat-chip-option>ecônomica</mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+
+    <div class="flex-container">
+      <mat-form-field appearance="outline" class="input-container">
+        <mat-label>Origem</mat-label>
+        <mat-icon matPrefix>flight_takeoff</mat-icon>
+        <input matInput placeholder="Origem">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <button mat-icon-button> <mat-icon>sync_alt</mat-icon></button>
+      <mat-form-field appearance="outline" class="input-container">
+        <mat-label>Destino</mat-label>
+        <mat-icon matPrefix>flight_land</mat-icon>
+        <input matInput placeholder="Destino">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input-container">
+        <mat-label>data da ida</mat-label>
+        <input matInput [matDatepicker]="dataIda" placeholder="selecione">
+        <mat-datepicker-toggle matIconSuffix [for]="dataIda"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #dataIda>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>cancelar</button>
+            <button mat-raised-button color="primary" matDatepickerApply>aplicar</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="input-container">
+        <mat-label>data da volta</mat-label>
+        <input matInput [matDatepicker]="dataVolta" placeholder="selecione">
+        <mat-datepicker-toggle matIconSuffix [for]="dataVolta"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #dataVolta>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>cancelar</button>
+            <button mat-raised-button color="primary" matDatepickerApply>aplicar</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+      </mat-form-field>
+
+      <button mat-flat-button color="primary">buscar</button>
+    </div>
+
+
+  </form>
+</app-card>
